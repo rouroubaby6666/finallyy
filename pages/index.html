@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>千年匠心守艺脉</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", serif;
+        }
+
+        body {
+            min-height: 120vh;
+            padding-bottom: 50px;
+        }
+
+        .home-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5e9d8 url("img/bg_home_bg.jpg") center/cover no-repeat;
+            z-index: -1;
+            opacity: 0;
+            animation: bgFadeIn 1s ease-in-out forwards;
+        }
+        @keyframes bgFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .title {
+            text-align: center;
+            font-size: 42px;
+            color: #333;
+            margin: 80px 0 60px;
+            text-shadow: 1px 1px 3px #fff;
+        }
+
+        .craft-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            width: 600px;
+            margin: 0 auto 100px;
+        }
+
+        .craft-item {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            margin: 0 auto;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .craft-item:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        .craft-item:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .craft-item i {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: #8B4513;
+            transition: all 0.3s;
+        }
+        .craft-item p {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .craft-item:hover i, .craft-item:hover p {
+            color: #a0522d;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: #8B4513;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s;
+            box-shadow: 0 3px 8px rgba(139, 69, 19, 0.2);
+            z-index: 99;
+        }
+        .back-to-top:hover {
+            transform: scale(1.1);
+            background: #a0522d;
+        }
+        .back-to-top.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 30px;
+                margin: 50px 0 40px;
+            }
+            .craft-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                width: 90%;
+                margin-bottom: 80px;
+            }
+            .craft-item {
+                width: 180px;
+                height: 180px;
+            }
+            .craft-item i {
+                font-size: 35px;
+            }
+            .craft-item p {
+                font-size: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .title {
+                font-size: 24px;
+            }
+            .craft-item {
+                width: 150px;
+                height: 150px;
+            }
+            .craft-item i {
+                font-size: 30px;
+            }
+            .craft-item p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-bg"></div>
+    <h1 class="title">千年匠心守艺脉</h1>
+    
+    <!-- 直接显示工艺网格，无任何按钮 -->
+    <div class="craft-grid">
+        <div class="craft-item" onclick="window.location.href='pages/papercut.html'" aria-label="进入剪纸工艺详情页">
+            <i class="fas fa-scissors"></i>
+            <p>剪纸</p>
+        </div>
+        <div class="craft-item" onclick="window.location.href='pages/ceramic.html'" aria-label="进入陶艺工艺详情页">
+            <i class="fas fa-mug-hot"></i>
+            <p>陶艺</p>
+        </div>
+        <div class="craft-item" onclick="window.location.href='pages/woodcarving.html'" aria-label="进入木雕工艺详情页">
+            <i class="fas fa-tree"></i>
+            <p>木雕</p>
+        </div>
+        <div class="craft-item" onclick="window.location.href='pages/embroidery.html'" aria-label="进入刺绣工艺详情页">
+            <i class="fas fa-thread"></i>
+            <p>刺绣</p>
+        </div>
+    </div>
+
+    <div class="back-to-top" aria-label="回到页面顶部">↑</div>
+
+    <script>
+        $(function(){
+            // 回到顶部功能
+            $(window).scroll(function(){
+                let scrollTop = $(this).scrollTop();
+                scrollTop > 300 ? $('.back-to-top').fadeIn(300) : $('.back-to-top').fadeOut(300);
+            });
+            $('.back-to-top').click(function(){
+                $('html,body').animate({scrollTop: 0},500);
+            });
+
+            // 工艺项悬停图标放大效果
+            $('.craft-item').hover(function(){
+                $(this).find('i').css({'font-size': '44px','top': '28%'});
+            },function(){
+                $(this).find('i').css({'font-size': '40px','top': '30%'});
+            });
+
+            // 标题淡入动画
+            $('.title').css({opacity:0, marginTop:'120px'}).animate({opacity: 1,marginTop: '80px'},800);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>木雕 - 千年匠心</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Microsoft YaHei,serif}
+body{min-height:100vh;background:url(../img/bg_home_bg.jpg) center/cover fixed}
+header{display:flex;align-items:center;justify-content:center;padding:30px 20px;position:relative}
+.back{position:absolute;left:20px;background:#8B4513;color:#fff;border:none;padding:8px 18px;border-radius:20px;cursor:pointer}
+h1{font-size:32px;color:#333;text-shadow:0 0 4px #fff}
+.intro-card-box{width:90%;max-width:1000px;margin:20px auto;display: grid;grid-template-columns: repeat(auto-fit, minmax(260px,1fr));gap:20px;}
+.intro-card{background:rgba(255,255,255,.9);border-radius:10px;padding:25px;box-shadow:0 4px 10px rgba(0,0,0,.2);transition: all 0.3s;}
+.intro-card:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(139,69,19,.3);}
+.intro-card h3{color:#8B4513;font-size:20px;margin-bottom:15px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #f5e9d8;padding-bottom:8px;}
+.intro-card p{color:#333;line-height:1.8;font-size:15px;margin:8px 0;}
+.content-panel{position:relative;width:90%;max-width:800px;margin:40px auto}
+.panel-viewport{overflow:hidden;border-radius:15px;background:rgba(255,255,255,.9);box-shadow:0 4px 15px rgba(0,0,0,.15)}
+.panel-track{display:flex;transition:transform .5s}
+.panel-slide{flex:0 0 100%;padding:50px 30px;text-align:center}
+.panel-slide h3{color:#8B4513;font-size:26px;margin-bottom:25px;display:flex;align-items:center;justify-content:center;gap:10px}
+.panel-slide p{margin:12px 0;font-size:18px;color:#333}
+.panel-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(139,69,19,.8);color:#fff;border:2px solid #fff;font-size:24px;cursor:pointer;z-index:2}
+.panel-nav:hover{background:#8B4513}
+.prev-panel{left:10px}
+.next-panel{right:10px}
+.panel-nav:disabled{background:#ccc;cursor:not-allowed}
+.question-box{width:90%;max-width:800px;margin:40px auto;padding:30px;background:rgba(255,255,255,.95);border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.15);}
+.question-box h2{color:#8B4513;text-align:center;margin-bottom:25px;font-size:24px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.question-item{margin:20px 0;padding-bottom:20px;border-bottom:1px dashed #f5e9d8;}
+.question-item h4{color:#333;font-size:17px;margin-bottom:15px;line-height:1.6;}
+.option{display:block;margin:10px 0;padding:10px 15px;background:#f9f5f0;border-radius:8px;cursor:pointer;transition:all 0.2s;font-size:16px;}
+.option:hover{background:#f5e9d8;}
+.option.correct{background:#d4edda;color:#155724;border:1px solid #c3e6cb;}
+.option.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb;}
+.answer-tips{margin-top:12px;padding:10px;border-radius:8px;font-size:15px;display:none;text-align:center;}
+footer{width:90%;max-width:800px;margin:0 auto 40px;background:rgba(255,255,255,.85);padding:25px;border-radius:10px;text-align:center;line-height:1.8}
+@media(max-width:768px){
+h1{font-size:26px}
+.panel-nav{width:38px;height:38px;font-size:20px}
+.intro-card-box{gap:15px;}
+.intro-card{padding:20px;}
+.question-box{padding:20px;}
+.question-box h2{font-size:22px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <button class="back" onclick="location.href='../index.html'">← 返回首页</button>
+  <h1>木雕工艺 · 一刀一刻皆匠心</h1>
+</header>
+<div class="intro-card-box">
+    <div class="intro-card">
+        <h3><i class="fas fa-tree"></i> 木雕选材讲究</h3>
+        <p>木雕用料多为硬木，黄花梨木纹理华美、木质坚硬，是木雕上品；紫檀木色泽深沉，雕刻后质感温润；黄杨木质地细腻，适合精雕细琢的小件摆件；樟木自带香气可防虫，常用于大件家具雕刻。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-tools"></i> 木雕四大技法</h3>
+        <p>浮雕：图案浮于木料表面，分深浮雕与浅浮雕；圆雕：立体雕刻，无背景衬托，常见人物、瑞兽摆件；透雕：又称镂空雕，花纹层层镂空，通透灵动；沉雕：图案凹陷于木料，线条简洁清雅。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-map-marker-alt"></i> 四大木雕流派</h3>
+        <p>东阳木雕：浙江东阳出品，层次丰富、精巧细腻；黄杨木雕：浙江温州，以黄杨木为料，人物造型传神；潮州木雕：广东潮州，髹漆贴金，富丽堂皇；福建木雕：福建福州，擅长龙眼木雕刻，瑞兽题材居多。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-history"></i> 木雕发展历程</h3>
+        <p>木雕起源于新石器时代，唐宋技艺成熟，明清达到鼎盛，多用于建筑构件、家具装饰、文房摆件。宫廷木雕精工细作，民间木雕质朴生动，是中华民间工艺中流传最广的技艺之一。</p>
+    </div>
+</div>
+<div class="content-panel">
+  <button class="panel-nav prev-panel" id="prevPanel" disabled>‹</button>
+  <button class="panel-nav next-panel" id="nextPanel">›</button>
+  <div class="panel-viewport">
+    <div class="panel-track" id="panelTrack">
+      <div class="panel-slide"><h3><i class="fas fa-history"></i> 木雕文化</h3><p>历史起源与发展</p><p>四大木雕流派特色</p><p>地域木雕风格差异</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-tools"></i> 制作技艺</h3><p>选材与木料处理</p><p>雕刻技法（圆雕/浮雕）</p><p>打磨与上漆工艺</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-award"></i> 经典作品</h3><p>传统建筑木雕构件</p><p>文房摆件鉴赏</p><p>大师代表作品</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-hand-sparkles"></i> 互动体验</h3><p>虚拟雕刻模拟</p><p>木料识别问答</p><p>DIY 木雕教程</p></div>
+    </div>
+  </div>
+</div>
+<div class="question-box">
+    <h2><i class="fas fa-question-circle"></i> 木雕趣味小问答</h2>
+    <div class="question-item">
+        <h4>1. 以下哪种木料是木雕工艺中的「上品木料」，纹理华美且木质坚硬？</h4>
+        <div class="option" onclick="checkAnswer(this, 1)">A. 松木</div>
+        <div class="option" onclick="checkAnswer(this, 1)">B. 黄花梨木</div>
+        <div class="option" onclick="checkAnswer(this, 1)">C. 杨木</div>
+        <div class="option" onclick="checkAnswer(this, 1)">D. 桐木</div>
+        <div class="answer-tips" id="tips1">正确答案：B ✔️ 黄花梨木是木雕上品，纹理美观，木质坚硬且不易开裂。</div>
+    </div>
+    <div class="question-item">
+        <h4>2. 我国四大木雕流派中，以「髹漆贴金、富丽堂皇」为特色的是哪一派？</h4>
+        <div class="option" onclick="checkAnswer(this, 2)">A. 东阳木雕</div>
+        <div class="option" onclick="checkAnswer(this, 2)">B. 黄杨木雕</div>
+        <div class="option" onclick="checkAnswer(this, 2)">C. 潮州木雕</div>
+        <div class="option" onclick="checkAnswer(this, 2)">D. 福建木雕</div>
+        <div class="answer-tips" id="tips2">正确答案：C ✔️ 潮州木雕的特色是雕刻后髹漆贴金，成品金光闪闪，富丽大气。</div>
+    </div>
+    <div class="question-item">
+        <h4>3. 木雕技法中，「图案浮于木料表面，有高低层次感」的是哪种技法？</h4>
+        <div class="option" onclick="checkAnswer(this, 3)">A. 圆雕</div>
+        <div class="option" onclick="checkAnswer(this, 3)">B. 浮雕</div>
+        <div class="option" onclick="checkAnswer(this, 3)">C. 透雕</div>
+        <div class="option" onclick="checkAnswer(this, 3)">D. 沉雕</div>
+        <div class="answer-tips" id="tips3">正确答案：B ✔️ 浮雕是木雕最常用技法，图案凸起于木料，分浅浮雕和深浮雕两种。</div>
+    </div>
+    <div class="question-item">
+        <h4>4. 以下哪种木雕，是专门以黄杨木为原料进行雕刻的特色流派？</h4>
+        <div class="option" onclick="checkAnswer(this, 4)">A. 浙江温州黄杨木雕</div>
+        <div class="option" onclick="checkAnswer(this, 4)">B. 福建龙眼木雕</div>
+        <div class="option" onclick="checkAnswer(this, 4)">C. 广东潮州木雕</div>
+        <div class="option" onclick="checkAnswer(this, 4)">D. 浙江东阳木雕</div>
+        <div class="answer-tips" id="tips4">正确答案：A ✔️ 黄杨木雕是浙江温州的特色，黄杨木质地细腻，适合雕刻精致的人物摆件。</div>
+    </div>
+</div>
+<footer>
+  <h3>🌳 木雕工艺的传承与创新</h3>
+  <p>木雕是中国最古老的民间工艺之一，从新石器时代的简单雕琢，到唐宋的鼎盛发展，再到明清的精工细作，木雕始终以其独特的艺术魅力承载着中华民族的审美追求。如今，传统木雕技艺与现代设计、数字化技术结合，让这门古老工艺在当代焕发新活力。</p>
+</footer>
+<script>
+const panelTrack=document.getElementById('panelTrack');
+let cur=0;
+const total=panelTrack.children.length;
+function goPanel(i){
+  cur=Math.max(0,Math.min(i,total-1));
+  panelTrack.style.transform=`translateX(${-cur*100}%)`;
+  document.getElementById('prevPanel').disabled=cur===0;
+  document.getElementById('nextPanel').disabled=cur===total-1;
+}
+document.getElementById('prevPanel').onclick=()=>goPanel(cur-1);
+document.getElementById('nextPanel').onclick=()=>goPanel(cur+1);
+goPanel(0);
+const answerKey = {
+    1: "B", 2: "C", 3: "B", 4: "A"
+};
+function checkAnswer(option, qNum) {
+    const allOptions = option.parentElement.querySelectorAll('.option');
+    allOptions.forEach(opt => {
+        opt.classList.remove('correct', 'error');
+    });
+    const clickAns = option.innerText.substr(0,1);
+    if(clickAns === answerKey[qNum]){
+        option.classList.add('correct');
+    }else{
+        option.classList.add('error');
+    }
+    document.getElementById(`tips${qNum}`).style.display = 'block';
+}
+</script>
+</body>
+</html>

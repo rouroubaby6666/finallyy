@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>刺绣 - 千年匠心守艺脉</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Microsoft YaHei,serif}
+body{min-height:100vh;background:url(../img/bg_home_bg.jpg) center/cover fixed}
+header{display:flex;align-items:center;justify-content:center;padding:30px 20px;position:relative}
+.back{position:absolute;left:20px;background:#8B4513;color:#fff;border:none;padding:8px 18px;border-radius:20px;cursor:pointer;transition:all 0.3s}
+.back:hover{background:#a0522d;transform:scale(1.03)}
+h1{font-size:32px;color:#333;text-shadow:0 0 4px #fff}
+.intro-card-box{width:90%;max-width:1000px;margin:20px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.intro-card{background:rgba(255,255,255,.9);border-radius:10px;padding:25px;box-shadow:0 4px 10px rgba(0,0,0,.2);transition:all 0.3s}
+.intro-card:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(139,69,19,.3)}
+.intro-card h3{color:#8B4513;font-size:20px;margin-bottom:15px;display:flex;align-items:center;gap:10px;border-bottom:2px solid #f5e9d8;padding-bottom:8px}
+.intro-card p{color:#333;line-height:1.8;font-size:15px;margin:8px 0}
+.video-btn{width:90%;max-width:800px;margin:20px auto;text-align:center}
+.video-btn a{display:inline-block;background:#8B4513;color:#fff;padding:12px 30px;border-radius:25px;text-decoration:none;font-size:18px;transition:all 0.3s;box-shadow:0 3px 8px rgba(139,69,19,0.2);display:flex;align-items:center;gap:10px;margin:0 auto}
+.video-btn a:hover{background:#a0522d;transform:scale(1.03);box-shadow:0 5px 12px rgba(139,69,19,0.3)}
+.content-panel{position:relative;width:90%;max-width:800px;margin:30px auto}
+.panel-viewport{overflow:hidden;border-radius:15px;background:rgba(255,255,255,.9);box-shadow:0 4px 15px rgba(0,0,0,.15)}
+.panel-track{display:flex;transition:transform .5s}
+.panel-slide{flex:0 0 100%;padding:50px 30px;text-align:center}
+.panel-slide h3{color:#8B4513;font-size:26px;margin-bottom:25px;display:flex;align-items:center;justify-content:center;gap:10px}
+.panel-slide p{margin:12px 0;font-size:18px;color:#333}
+.panel-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(139,69,19,.8);color:#fff;border:2px solid #fff;font-size:24px;cursor:pointer;z-index:2}
+.panel-nav:hover{background:#8B4513}
+.prev-panel{left:10px}
+.next-panel{right:10px}
+.panel-nav:disabled{background:#ccc;cursor:not-allowed}
+.special-card{width:90%;max-width:800px;margin:30px auto;padding:30px;background:rgba(255,255,255,.95);border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.15)}
+.special-card h2{color:#8B4513;text-align:center;margin-bottom:25px;font-size:24px;display:flex;align-items:center;justify-content:center;gap:10px}
+.special-card .list-item{display:flex;align-items:flex-start;margin:20px 0;padding:15px;background:#f9f5f0;border-radius:10px;gap:15px}
+.special-card .list-item i{color:#8B4513;font-size:22px;margin-top:5px;width:25px;text-align:center}
+.special-card .list-item h4{color:#8B4513;font-size:18px;margin-bottom:8px}
+.special-card .list-item p{color:#333;line-height:1.7;font-size:15px}
+footer{width:90%;max-width:800px;margin:0 auto 40px;background:rgba(255,255,255,.85);padding:25px;border-radius:10px;text-align:center;line-height:1.8}
+@media(max-width:768px){
+h1{font-size:26px}
+.panel-nav{width:38px;height:38px;font-size:20px}
+.intro-card-box{gap:15px}
+.intro-card{padding:20px}
+.video-btn a{padding:10px 25px;font-size:16px}
+.special-card{padding:20px}
+.special-card h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header>
+  <button class="back" onclick="location.href='../index.html'">← 返回首页</button>
+  <h1>刺绣工艺 · 一针一线绣芳华</h1>
+</header>
+
+<div class="intro-card-box">
+    <div class="intro-card">
+        <h3><i class="fas fa-thread"></i> 刺绣用线讲究</h3>
+        <p>刺绣用料丝线为尊，桑蚕丝线色泽莹润、柔滑细腻，可劈丝分层，绣出渐变层次；棉线质朴耐磨，适合民俗刺绣；绒线饱满厚实，立体感强，金银线则雍容华贵，多用于宫廷绣品点缀。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-pen-fancy"></i> 刺绣核心针法</h3>
+        <p>平针绣基础百搭，针脚平齐细腻；套针绣层层相套，色彩过渡自然；打籽绣针结饱满，立体感十足；盘金绣金线盘绕，富丽堂皇；苏绣的双面绣更是绝技，正反如一，精妙绝伦。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-map-marker-alt"></i> 四大名绣风采</h3>
+        <p>苏绣清雅灵动，针法细腻如发丝；湘绣狮虎逼真，毛丝有力栩栩如生；粤绣繁丽夺目，喜用金线配色明艳；蜀绣色彩艳丽，鲤鱼锦鲤题材活灵活现，四大名绣各领风骚，皆是国之瑰宝。</p>
+    </div>
+    <div class="intro-card">
+        <h3><i class="fas fa-history"></i> 刺绣传承千年</h3>
+        <p>刺绣始于上古，兴于汉唐，盛于明清。从宫廷御用的锦绣华服，到民间的荷包手帕，刺绣融书画于针线，纳山水于锦帛，一针一线皆是东方美学，承载着中华女子的巧思与柔情。</p>
+    </div>
+</div>
+
+<div class="video-btn">
+    <a href="https://www.bilibili.com/video/BV187411i799/" target="_blank"><i class="fab fa-bilibili"></i> 观看刺绣工艺纪录片 · 感受针丝匠心</a>
+</div>
+
+<div class="content-panel">
+  <button class="panel-nav prev-panel" id="prevPanel" disabled>‹</button>
+  <button class="panel-nav next-panel" id="nextPanel">›</button>
+  <div class="panel-viewport">
+    <div class="panel-track" id="panelTrack">
+      <div class="panel-slide"><h3><i class="fas fa-history"></i> 刺绣文化</h3><p>历史起源与发展</p><p>四大名绣特色差异</p><p>地域刺绣风格韵味</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-pen-fancy"></i> 刺绣技艺</h3><p>选线与底料搭配</p><p>经典针法技巧运用</p><p>配色与图案设计</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-award"></i> 经典绣品</h3><p>宫廷服饰刺绣纹样</p><p>民间荷包扇面绣品</p><p>大师传世刺绣作品</p></div>
+      <div class="panel-slide"><h3><i class="fas fa-hand-sparkles"></i> 传承创新</h3><p>刺绣非遗技艺保护</p><p>现代刺绣设计融合</p><p>新生代绣娘传承之路</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="special-card">
+    <h2><i class="fas fa-gem"></i> 刺绣经典纹样与寓意</h2>
+    <div class="list-item">
+        <i class="fas fa-flower"></i>
+        <div>
+            <h4>花鸟草木纹 · 美好祥瑞</h4>
+            <p>牡丹刺绣寓意富贵荣华，荷花象征清雅圣洁，梅兰竹菊合称四君子，代表高洁傲骨，喜鹊登梅绣样寓意双喜临门，百花纹样更是刺绣中永恒的吉祥主题。</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <i class="fas fa-dragon"></i>
+        <div>
+            <h4>瑞兽祥纹 · 吉祥纳福</h4>
+            <p>龙凤刺绣象征龙凤呈祥、姻缘美满，麒麟送子寓意多子多福，鸳鸯戏水代表恩爱和睦，蝙蝠纹谐音"遍福"，是民间刺绣中最常见的纳福纹样。</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <i class="fas fa-cloud"></i>
+        <div>
+            <h4>祥云回纹 · 平安永续</h4>
+            <p>祥云纹样飘逸灵动，寓意吉祥如意、步步高升，回纹线条连绵不断，象征福寿绵长、生生不息，这类纹样多绣于绣品边缘，雅致又吉祥。</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <i class="fas fa-book"></i>
+        <div>
+            <h4>山水人物纹 · 意境绵长</h4>
+            <p>山水刺绣融诗画于锦帛，寓意山河锦绣、心境悠然；人物绣品多为才子佳人、福禄寿三星，传递着团圆美满、福寿安康的美好祈愿与文化内涵。</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+  <h3>🧵 刺绣工艺的传承与创新</h3>
+  <p>刺绣是中国最美的民间工艺之一，从远古的简单针绣，到汉唐的锦绣华章，再到明清的精工细作，刺绣以针为笔、以线为墨，将东方美学绣于锦帛之上。如今，传统刺绣技艺与现代设计相融，非遗绣娘守艺传承，让这门千年工艺在时光里绽放芳华，针丝永续，匠心相传。</p>
+</footer>
+
+<script>
+const panelTrack=document.getElementById('panelTrack');
+let cur=0;
+const total=panelTrack.children.length;
+function goPanel(i){
+cur=Math.max(0,Math.min(i,total-1));
+panelTrack.style.transform=`translateX(${-cur*100}%)`;
+document.getElementById('prevPanel').disabled=cur===0;
+document.getElementById('nextPanel').disabled=cur===total-1;
+}
+document.getElementById('prevPanel').onclick=()=>goPanel(cur-1);
+document.getElementById('nextPanel').onclick=()=>goPanel(cur+1);
+goPanel(0);
+</script>
+</body>
+</html>             
